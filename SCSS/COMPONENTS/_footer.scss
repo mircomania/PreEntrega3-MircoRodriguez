@@ -1,0 +1,60 @@
+
+footer {
+    padding-top: 500px;
+    background-image: linear-gradient(to right, 
+    #885157 0%,
+    #885157 20%,
+    #b67078 100%);
+    padding: 10px;
+    text-align: center;
+    a {
+        width: 20%;
+        color: bisque;
+        font-size: 30px;
+        text-decoration: none;
+    }
+    .logoFooter {
+        font-family: 'Quicksand', sans-serif;
+        text-shadow: 0 0 10px #000000ce;
+        a {
+            &:hover {
+                color: bisque;
+            }
+        }
+    }
+    .redes {
+        a {
+            &:hover {
+                color: black;
+            }
+        }
+    }
+    p {
+        font-size: 16px;
+    }
+    
+}
+
+@media only screen and (min-width:1200px) {
+
+    footer {
+        padding-top: 500px;
+        padding: 10px;
+        .logoFooter {
+            a {
+                width: 20%;
+                font-size: 50px;
+            }
+        }
+        .redes {
+            a {
+                width: 20%;
+                font-size: 50px;
+            }
+        }
+        p {
+            font-size: 18px;
+        }
+    }
+}
+

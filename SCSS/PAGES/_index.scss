@@ -1,0 +1,189 @@
+
+.mainHome {
+    section {
+        div {
+            .presentacion { 
+                font-family: 'Dancing Script', cursive;
+                text-shadow: 0 0 5px #ce50504d;
+                text-align: center;
+                padding: 30px;
+                font-size: 45px;
+                animation-name: aparecer;
+                animation-duration: 2s;
+            }
+        }
+    }
+    .carruselA {
+        padding: 10px;
+        animation-name: aparecer;
+        animation-duration: 1s;
+        .carruselB {
+            box-shadow: 0 0 5px #000000;
+        }
+        .callCarrusel {
+            padding-top: 20px;
+            font-family: 'Quicksand', sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            a {
+                background-color: #afa2a280;
+                color: #885157;
+                text-decoration: none;
+                padding: 10px 20px;
+                border-radius: 15px;
+                text-transform: uppercase;
+                font-size: 16px;
+                box-shadow: 0 0 5px #00000094;
+                transition: 0.7s;
+                &:hover {
+                    color: #000000;
+                    box-shadow: inset 0 0 5px #885157, 0 0 5px #00000094;
+                    transform: scale(0.9);
+                    
+                }
+            }
+        }
+    }
+    .divPag {
+        height: 100px;
+        padding-top: 10px;
+        padding: 10px;
+        animation-name: aparecer;
+        animation-duration: 1s;
+    }
+    .noticia { 
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        padding: 10px;
+        flex-direction: column;
+        font-family: 'Roboto', sans-serif;
+        animation-name: aparecer;
+        animation-duration: 1s;
+        div {
+            img {
+                max-width: 100%;
+                height: auto;
+                box-shadow: 0 0 5px #000000;
+            }
+        }
+        div {
+            p {
+                padding-top: 10px;
+                font-size: 16px;
+                &::first-letter {
+                    font-size: 36px;
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width:768px) {
+
+    .mainHome {
+        section {
+            div{
+                .presentacion {
+                    padding: 30px;
+                    padding-top: 50px;
+                    font-size: 55px;
+                }
+            }
+        }
+        .carruselA {
+            padding: 80px;
+            padding-bottom: 40px;
+            .callCarrusel {
+                padding-top: 40px;
+                a {
+                    padding: 10px 50px;
+                    font-size: 26px;
+                }
+            }
+        }
+        .divPag {
+            padding: 30px;
+        }
+        .noticia {
+            padding: 80px;
+            padding-top: 40px;
+            padding-bottom: 0;
+        }
+    }
+}
+
+@media only screen and (min-width:1200px) {
+
+    .mainHome {
+        section {
+            div {
+                .presentacion {
+                    padding: 30px;
+                    font-size: 70px;
+                }
+            }
+        }
+        .carruselA {
+            padding: 300px;
+            padding-top: 50px;
+            padding-bottom: 40px;
+            .callCarrusel {
+                a {
+                    padding: 10px 150px;
+                    font-size: 36px;
+                }
+            }
+        }
+        .divPag {
+            padding: 50px;
+        }
+        .noticia {
+            padding: 300px;
+            padding-top: 60px;
+            padding-bottom: 0;
+            div {
+                p {
+                    font-size: 30px;
+                    padding-top: 40px;
+                    &::first-letter {
+                        font-size: 56px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width:1700px) {
+
+    .mainHome {
+        .carruselA {
+            padding: 450px;
+            padding-top: 50px;
+            padding-bottom: 40px;
+            .callCarrusel {
+                a {
+                    font-size: 46px;
+                }
+            }
+        }
+        .divPag {
+            padding: 70px;
+        }
+        .noticia {
+            padding: 450px;
+            padding-top: 60px;
+            padding-bottom: 0;
+            div {
+                p {
+                    font-size: 35px;
+                    padding-top: 40px;
+                }
+            }
+        }
+    }
+}
+

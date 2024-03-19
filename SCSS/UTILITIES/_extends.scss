@@ -1,0 +1,133 @@
+.agendaIndex {
+    font-family: 'Quicksand', sans-serif;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-bottom: 50px;
+        animation-name: aparecer;
+        animation-duration: 1s;
+        a {
+            background-color: #afa2a280;
+            color: #885157;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 15px;
+            text-transform: uppercase;
+            font-size: 16px;
+            box-shadow: 0 0 5px #00000094;
+            transition: 0.7s;
+            &:hover {
+                color: #000000;
+                box-shadow: inset 0 0 5px #885157, 0 0 5px #00000094;
+                transform: scale(0.9);
+            }
+        }
+}
+
+.cabezera {
+    padding: 10px;
+    text-shadow: 0 0 5px #ce50504d;
+    .tituloPag {
+        font-family: 'Quicksand', sans-serif;
+        font-size: 60px;
+        padding-top: 25px;
+        animation-name: aparecer;
+        animation-duration: 2s;
+    }
+    .subtiPag {
+        font-family: 'Raleway', sans-serif;
+        font-size: 20px;
+        padding-left: 30px;
+        animation-name: aparecer;
+        animation-duration: 3s;
+    }
+}
+
+
+.divPag2 {
+    padding: 10px;
+    animation-name: aparecer;
+    animation-duration: 1s;
+}
+
+@media only screen and (min-width:768px) {
+
+    .agendaIndex {
+        a {
+            padding: 10px 50px;
+            font-size: 26px;
+        }
+    }
+
+    .cabezera {
+        padding: 20px;
+        .tituloPag {
+            font-size: 80px;
+            padding-top: 35px;
+        }
+        .subtiPag {
+            font-size: 30px;
+            padding-left: 30px;
+        }
+    }
+    .divPag2 {
+        padding: 30px;
+        padding-top: 10px;
+        padding-bottom: 20px;
+    }
+}
+
+@media only screen and (min-width:1200px) {
+
+    .agendaIndex {
+        padding-top: 50px;
+        padding-bottom: 80px;
+        a {
+            padding: 10px 130px;
+            font-size: 36px;
+        }
+    }
+
+    .cabezera {
+        padding: 30px;
+        padding-top: 5px;
+        .tituloPag {
+            font-size: 100px;
+            padding-top: 15px;
+            padding-left: 180px;
+        }
+        .subtiPag {
+            font-size: 40px;
+            padding-left: 220px;
+        }
+    }
+    .divPag2 {
+        padding: 50px;
+        padding-bottom: 10px;
+        padding-top: 20px;
+    }
+}
+
+@media only screen and (min-width:1700px) {
+
+    .agendaIndex {
+        a {
+            font-size: 46px;
+        }
+    }
+
+    .cabezera {
+        .tituloPag {
+            font-size: 110px;
+        }
+        .subtiPag {
+            font-size: 50px;
+        }
+    }
+    .divPag2 {
+        padding: 70px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+    
+}

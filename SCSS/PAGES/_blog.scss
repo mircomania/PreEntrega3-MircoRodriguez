@@ -1,0 +1,116 @@
+
+
+.mainBlog {
+    .blogBox {
+        padding: 10px;
+        padding-top: 50px;
+        padding-bottom: 50px;
+        grid-gap: 40px;
+        width: 100%;
+        height: auto;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(6, 400px);
+        font-family: 'Roboto', sans-serif;
+        animation-name: aparecer;
+        animation-duration: 1s;
+        .itemblog {
+            border: 1px solid #000000;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            box-shadow: 0 0 5px #000000;
+            a {
+                color: #000000;
+                .loremBlog {
+                    font-size: 20px;
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    right: 0;
+                    background-image: linear-gradient(to top, #adadad, #dfd8cb00) ;
+                    padding: 10px;
+                    transition: 0.7s;
+                    text-align: center;
+                    &:hover {
+                        height: 110px;
+                        font-size: 36px;
+                        padding-top: 25px;
+                        font-weight: bold;
+                    }
+                    &::first-letter {
+                        font-size: 36px;
+                        font-weight: bold;
+                    }
+                }
+            }
+        }
+        .itemblog1 {
+            background-image: url(../IMG/niños/Blog\ Card\ 2.webp);
+        }
+        .itemblog2 {
+            background-image: url(../IMG/bebes/Blog\ Card\ 1.webp);
+        }
+        .itemblog3 {
+            background-image: url(../IMG/niños/Blog\ Card\ 6.webp);
+        }
+        .itemblog4 {
+            background-image: url(../IMG/novios/Blog\ Card\ 3.webp);
+        }
+        .itemblog5 {
+            background-image: url(../IMG/pymes/Blog\ Card\ 4.webp);
+        }
+        .itemblog6 {
+            background-image: url(../IMG/pymes/Blog\ Card\ 5.webp);
+        }
+    }
+}
+
+@media only screen and (min-width:768px) {
+
+    .mainBlog {
+        .blogBox {
+            padding: 80px;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: repeat(3, 400px);
+        }
+    
+    }
+}
+
+@media only screen and (min-width:1200px) {
+
+    .mainBlog {
+        .blogBox {
+            padding: 190px;
+            padding-top: 50px;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: repeat(2, 400px);
+    }
+    }
+}
+
+@media only screen and (min-width:1700px) {
+
+    .mainBlog {
+        .blogBox {
+            grid-template-rows: repeat(2, 600px);
+            .itemblog {
+                a {
+                    .loremBlog {
+                        font-size: 40px;
+                        &:hover {
+                            height: 140px;
+                            font-size: 50px;
+                            padding-top: 40px;
+                            font-weight: bold;
+                        }
+                        &::first-letter {
+                            font-size: 50px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

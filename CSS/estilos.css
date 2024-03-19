@@ -1,0 +1,864 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script&family=Quicksand:wght@300&family=Raleway:wght@100&family=Roboto:wght@100&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@keyframes aparecer {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.subir {
+  height: 30px;
+  width: 30px;
+  background-color: #F8F3E6;
+  border-radius: 50%;
+  position: fixed;
+  right: 10px;
+  bottom: 18px;
+  text-align: center;
+  line-height: 30px;
+  font-size: 20px;
+  color: #000000;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  transition: 0.7s;
+}
+.subir:hover {
+  color: #000000;
+  transform: scale(0.9);
+}
+
+.agendaIndex {
+  font-family: "Quicksand", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 50px;
+  animation-name: aparecer;
+  animation-duration: 1s;
+}
+.agendaIndex a {
+  background-color: rgba(175, 162, 162, 0.5019607843);
+  color: #885157;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 15px;
+  text-transform: uppercase;
+  font-size: 16px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5803921569);
+  transition: 0.7s;
+}
+.agendaIndex a:hover {
+  color: #000000;
+  box-shadow: inset 0 0 5px #885157, 0 0 5px rgba(0, 0, 0, 0.5803921569);
+  transform: scale(0.9);
+}
+
+.cabezera {
+  padding: 10px;
+  text-shadow: 0 0 5px rgba(206, 80, 80, 0.3019607843);
+}
+.cabezera .tituloPag {
+  font-family: "Quicksand", sans-serif;
+  font-size: 60px;
+  padding-top: 25px;
+  animation-name: aparecer;
+  animation-duration: 2s;
+}
+.cabezera .subtiPag {
+  font-family: "Raleway", sans-serif;
+  font-size: 20px;
+  padding-left: 30px;
+  animation-name: aparecer;
+  animation-duration: 3s;
+}
+
+.divPag2 {
+  padding: 10px;
+  animation-name: aparecer;
+  animation-duration: 1s;
+}
+
+@media only screen and (min-width: 768px) {
+  .agendaIndex a {
+    padding: 10px 50px;
+    font-size: 26px;
+  }
+  .cabezera {
+    padding: 20px;
+  }
+  .cabezera .tituloPag {
+    font-size: 80px;
+    padding-top: 35px;
+  }
+  .cabezera .subtiPag {
+    font-size: 30px;
+    padding-left: 30px;
+  }
+  .divPag2 {
+    padding: 30px;
+    padding-top: 10px;
+    padding-bottom: 20px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .agendaIndex {
+    padding-top: 50px;
+    padding-bottom: 80px;
+  }
+  .agendaIndex a {
+    padding: 10px 130px;
+    font-size: 36px;
+  }
+  .cabezera {
+    padding: 30px;
+    padding-top: 5px;
+  }
+  .cabezera .tituloPag {
+    font-size: 100px;
+    padding-top: 15px;
+    padding-left: 180px;
+  }
+  .cabezera .subtiPag {
+    font-size: 40px;
+    padding-left: 220px;
+  }
+  .divPag2 {
+    padding: 50px;
+    padding-bottom: 10px;
+    padding-top: 20px;
+  }
+}
+@media only screen and (min-width: 1700px) {
+  .agendaIndex a {
+    font-size: 46px;
+  }
+  .cabezera .tituloPag {
+    font-size: 110px;
+  }
+  .cabezera .subtiPag {
+    font-size: 50px;
+  }
+  .divPag2 {
+    padding: 70px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+}
+header {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  width: 100%;
+  height: 130px;
+  background-image: linear-gradient(to right, #885157 0%, #885157 20%, #b67078 100%);
+  padding: 10px;
+  z-index: 1000;
+}
+header .logo {
+  font-size: 50px;
+}
+header .logo a {
+  font-family: "Quicksand", sans-serif;
+  color: bisque;
+  text-decoration: none;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.8078431373);
+}
+header .barra {
+  padding-top: 10px;
+  font-size: 16px;
+  margin-left: auto;
+}
+header .barra ul li {
+  display: inline-block;
+}
+header .barra ul li a {
+  font-family: "Raleway", sans-serif;
+  color: bisque;
+  text-decoration: none;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.8078431373);
+}
+header .barra ul li a:hover {
+  color: black;
+}
+
+@media only screen and (min-width: 768px) {
+  header {
+    height: 200px;
+    padding: 10px;
+    padding-right: 40px;
+    padding-left: 40px;
+  }
+  header .logo {
+    font-size: 80px;
+  }
+  header .barra {
+    padding-top: 10px;
+    font-size: 26px;
+  }
+  header .barra ul li {
+    margin-left: 10px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  header {
+    height: 160px;
+    padding-left: 100px;
+    padding-right: 100px;
+  }
+  header .logo {
+    font-size: 100px;
+    position: absolute;
+    top: -10px;
+  }
+  header .barra {
+    font-size: 36px;
+    position: absolute;
+    top: 80px;
+    right: 100px;
+  }
+}
+@media only screen and (min-width: 1700px) {
+  header {
+    padding-left: 250px;
+  }
+  header .logo {
+    font-size: 110px;
+  }
+  header .barra {
+    font-size: 46px;
+    right: 250px;
+  }
+}
+main {
+  padding-top: 120px;
+  background-image: linear-gradient(to right, #DFD8CB 0%, #DFD8CB 20%, #f1eadb 100%);
+  width: 100%;
+}
+
+@media only screen and (min-width: 768px) {
+  main {
+    padding-top: 200px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  main {
+    padding-top: 200px;
+  }
+}
+footer {
+  padding-top: 500px;
+  background-image: linear-gradient(to right, #885157 0%, #885157 20%, #b67078 100%);
+  padding: 10px;
+  text-align: center;
+}
+footer a {
+  width: 20%;
+  color: bisque;
+  font-size: 30px;
+  text-decoration: none;
+}
+footer .logoFooter {
+  font-family: "Quicksand", sans-serif;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.8078431373);
+}
+footer .logoFooter a:hover {
+  color: bisque;
+}
+footer .redes a:hover {
+  color: black;
+}
+footer p {
+  font-size: 16px;
+}
+
+@media only screen and (min-width: 1200px) {
+  footer {
+    padding-top: 500px;
+    padding: 10px;
+  }
+  footer .logoFooter a {
+    width: 20%;
+    font-size: 50px;
+  }
+  footer .redes a {
+    width: 20%;
+    font-size: 50px;
+  }
+  footer p {
+    font-size: 18px;
+  }
+}
+.mainHome section div .presentacion {
+  font-family: "Dancing Script", cursive;
+  text-shadow: 0 0 5px rgba(206, 80, 80, 0.3019607843);
+  text-align: center;
+  padding: 30px;
+  font-size: 45px;
+  animation-name: aparecer;
+  animation-duration: 2s;
+}
+.mainHome .carruselA {
+  padding: 10px;
+  animation-name: aparecer;
+  animation-duration: 1s;
+}
+.mainHome .carruselA .carruselB {
+  box-shadow: 0 0 5px #000000;
+}
+.mainHome .carruselA .callCarrusel {
+  padding-top: 20px;
+  font-family: "Quicksand", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.mainHome .carruselA .callCarrusel a {
+  background-color: rgba(175, 162, 162, 0.5019607843);
+  color: #885157;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 15px;
+  text-transform: uppercase;
+  font-size: 16px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5803921569);
+  transition: 0.7s;
+}
+.mainHome .carruselA .callCarrusel a:hover {
+  color: #000000;
+  box-shadow: inset 0 0 5px #885157, 0 0 5px rgba(0, 0, 0, 0.5803921569);
+  transform: scale(0.9);
+}
+.mainHome .divPag {
+  height: 100px;
+  padding-top: 10px;
+  padding: 10px;
+  animation-name: aparecer;
+  animation-duration: 1s;
+}
+.mainHome .noticia {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 10px;
+  flex-direction: column;
+  font-family: "Roboto", sans-serif;
+  animation-name: aparecer;
+  animation-duration: 1s;
+}
+.mainHome .noticia div img {
+  max-width: 100%;
+  height: auto;
+  box-shadow: 0 0 5px #000000;
+}
+.mainHome .noticia div p {
+  padding-top: 10px;
+  font-size: 16px;
+}
+.mainHome .noticia div p::first-letter {
+  font-size: 36px;
+  font-weight: bold;
+}
+
+@media only screen and (min-width: 768px) {
+  .mainHome section div .presentacion {
+    padding: 30px;
+    padding-top: 50px;
+    font-size: 55px;
+  }
+  .mainHome .carruselA {
+    padding: 80px;
+    padding-bottom: 40px;
+  }
+  .mainHome .carruselA .callCarrusel {
+    padding-top: 40px;
+  }
+  .mainHome .carruselA .callCarrusel a {
+    padding: 10px 50px;
+    font-size: 26px;
+  }
+  .mainHome .divPag {
+    padding: 30px;
+  }
+  .mainHome .noticia {
+    padding: 80px;
+    padding-top: 40px;
+    padding-bottom: 0;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .mainHome section div .presentacion {
+    padding: 30px;
+    font-size: 70px;
+  }
+  .mainHome .carruselA {
+    padding: 300px;
+    padding-top: 50px;
+    padding-bottom: 40px;
+  }
+  .mainHome .carruselA .callCarrusel a {
+    padding: 10px 150px;
+    font-size: 36px;
+  }
+  .mainHome .divPag {
+    padding: 50px;
+  }
+  .mainHome .noticia {
+    padding: 300px;
+    padding-top: 60px;
+    padding-bottom: 0;
+  }
+  .mainHome .noticia div p {
+    font-size: 30px;
+    padding-top: 40px;
+  }
+  .mainHome .noticia div p::first-letter {
+    font-size: 56px;
+  }
+}
+@media only screen and (min-width: 1700px) {
+  .mainHome .carruselA {
+    padding: 450px;
+    padding-top: 50px;
+    padding-bottom: 40px;
+  }
+  .mainHome .carruselA .callCarrusel a {
+    font-size: 46px;
+  }
+  .mainHome .divPag {
+    padding: 70px;
+  }
+  .mainHome .noticia {
+    padding: 450px;
+    padding-top: 60px;
+    padding-bottom: 0;
+  }
+  .mainHome .noticia div p {
+    font-size: 35px;
+    padding-top: 40px;
+  }
+}
+.mainGaleria .galeriaBox {
+  padding: 10px;
+  animation-name: aparecer;
+  animation-duration: 1s;
+}
+.mainGaleria .galeriaBox .categoriaGaleria {
+  font-family: "Quicksand", sans-serif;
+}
+.mainGaleria .galeriaBox div img {
+  max-width: 100%;
+  height: auto;
+  box-shadow: 0 0 5px #000000;
+}
+.mainGaleria .galeriaBox .callGaleria {
+  padding-top: 10px;
+  font-family: "Quicksand", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.mainGaleria .galeriaBox .callGaleria a {
+  background-color: rgba(175, 162, 162, 0.5019607843);
+  color: #885157;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 15px;
+  text-transform: uppercase;
+  font-size: 16px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5803921569);
+  transition: 0.7s;
+}
+.mainGaleria .galeriaBox .callGaleria a:hover {
+  color: #000000;
+  box-shadow: inset 0 0 5px #885157, 0 0 5px rgba(0, 0, 0, 0.5803921569);
+  transform: scale(0.9);
+}
+
+@media only screen and (min-width: 768px) {
+  .mainGaleria .galeriaBox {
+    padding: 80px;
+    padding-top: 40px;
+    padding-bottom: 50px;
+  }
+  .mainGaleria .galeriaBox .categoriaGaleria h3 {
+    font-size: 50px;
+    padding-bottom: 20px;
+  }
+  .mainGaleria .galeriaBox .callGaleria {
+    padding-top: 20px;
+  }
+  .mainGaleria .galeriaBox .callGaleria a {
+    padding: 10px 50px;
+    font-size: 26px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .mainGaleria .galeriaBox {
+    padding: 300px;
+    padding-top: 20px;
+    padding-bottom: 50px;
+  }
+  .mainGaleria .galeriaBox .categoriaGaleria h3 {
+    font-size: 60px;
+    padding-bottom: 30px;
+  }
+  .mainGaleria .galeriaBox .callGaleria {
+    padding-top: 40px;
+  }
+  .mainGaleria .galeriaBox .callGaleria a {
+    padding: 10px 150px;
+    font-size: 36px;
+  }
+}
+@media only screen and (min-width: 1700px) {
+  .mainGaleria .galeriaBox {
+    padding: 450px;
+    padding-top: 20px;
+    padding-bottom: 80px;
+  }
+  .mainGaleria .galeriaBox .callGaleria a {
+    font-size: 46px;
+  }
+}
+.mainAgenda section form .formulario {
+  font-family: "Roboto", sans-serif;
+  padding: 10px;
+  padding-top: 10px;
+  padding-bottom: 70px;
+  display: grid;
+  grid-gap: 10px;
+  text-align: center;
+  animation-name: aparecer;
+  animation-duration: 1s;
+}
+.mainAgenda section form .formulario hr {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.mainAgenda section form .formulario input {
+  border-radius: 5px;
+  padding: 2px;
+  background-color: #e9e5dd;
+  border: 2px solid rgba(0, 0, 0, 0.6156862745);
+  box-shadow: inset 0 0 5px rgba(136, 81, 87, 0.6980392157);
+  outline: none;
+}
+.mainAgenda section form .formulario input[type=text] {
+  color: #000000;
+}
+.mainAgenda section form .formulario input::placeholder {
+  color: #000000;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+.mainAgenda section form .formulario input:focus {
+  border: 5px solid rgba(0, 0, 0, 0.8156862745);
+}
+.mainAgenda section form .formulario input[type=number]::-webkit-inner-spin-button,
+.mainAgenda section form .formulario input .formulario input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  appearance: none;
+}
+.mainAgenda section form .formulario select {
+  border-radius: 5px;
+  padding: 2px;
+  background-color: #e9e5dd;
+  border: 2px solid rgba(0, 0, 0, 0.6156862745);
+  box-shadow: inset 0 0 5px rgba(136, 81, 87, 0.6980392157);
+  text-transform: uppercase;
+  font-weight: bold;
+}
+.mainAgenda section form .formulario input[type=date] {
+  width: 150px;
+  margin: 0 auto;
+}
+.mainAgenda section form .formulario textarea {
+  resize: none;
+  border-radius: 5px;
+  padding: 2px;
+  background-color: #e9e5dd;
+  border: 2px solid rgba(0, 0, 0, 0.6156862745);
+  box-shadow: inset 0 0 5px rgba(136, 81, 87, 0.6980392157);
+  outline: none;
+}
+.mainAgenda section form .formulario textarea::placeholder {
+  color: #000000;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+.mainAgenda section form .formulario textarea:focus {
+  border: 5px solid rgba(0, 0, 0, 0.8156862745);
+}
+.mainAgenda section form .formulario input[type=submit] {
+  width: 150px;
+  margin: 0 auto;
+  transition: 0.7s;
+}
+.mainAgenda section form .formulario input[type=submit]:hover {
+  color: #000000;
+  box-shadow: inset 0 0 5px #885157, 0 0 5px rgba(0, 0, 0, 0.5803921569);
+  transform: scale(0.9);
+  font-weight: bold;
+}
+
+@media only screen and (min-width: 768px) {
+  .mainAgenda section form .formulario {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  .mainAgenda section form .formulario input {
+    width: 600px;
+    margin: 0 auto;
+  }
+  .mainAgenda section form .formulario select {
+    width: 600px;
+    margin: 0 auto;
+  }
+  .mainAgenda section form .formulario textarea {
+    width: 600px;
+    margin: 0 auto;
+  }
+  .mainAgenda section form .formulario input[type=date] {
+    width: 300px;
+  }
+  .mainAgenda section form .formulario input[type=submit] {
+    width: 200px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .mainAgenda section form .formulario {
+    padding-top: 20px;
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+  .mainAgenda section form .formulario input {
+    width: 800px;
+  }
+  .mainAgenda section form .formulario select {
+    width: 800px;
+  }
+  .mainAgenda section form .formulario textarea {
+    width: 800px;
+  }
+  .mainAgenda section form .formulario input[type=date] {
+    width: 400px;
+  }
+  .mainAgenda section form .formulario input[type=submit] {
+    width: 200px;
+  }
+}
+@media only screen and (min-width: 1700px) {
+  .mainAgenda section form .formulario {
+    padding-top: 20px;
+    padding-left: 70px;
+    padding-right: 70px;
+  }
+  .mainAgenda section form .formulario input {
+    width: 900px;
+  }
+  .mainAgenda section form .formulario select {
+    width: 900px;
+  }
+  .mainAgenda section form .formulario textarea {
+    width: 900px;
+  }
+  .mainAgenda section form .formulario input[type=date] {
+    width: 500px;
+  }
+  .mainAgenda section form .formulario input[type=submit] {
+    width: 300px;
+  }
+}
+.mainMision .misionBox {
+  font-family: "Roboto", sans-serif;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  animation-name: aparecer;
+  animation-duration: 1s;
+}
+.mainMision .misionBox .container .loremVisible::first-letter {
+  font-size: 36px;
+  font-weight: bold;
+}
+.mainMision .misionBox .container .dots:has(~ input[type=checkbox]:checked) {
+  display: none;
+}
+.mainMision .misionBox .container .loremExtra {
+  display: none;
+}
+.mainMision .misionBox .container .loremExtra:has(~ input[type=checkbox]:checked) {
+  display: inline;
+}
+.mainMision .misionBox .container input[type=checkbox] {
+  height: 1em;
+  display: block;
+  appearance: none;
+}
+.mainMision .misionBox .container input[type=checkbox]:checked ~ label::before {
+  content: "Leer Menos";
+}
+.mainMision .misionBox .container label {
+  font-family: "Roboto", sans-serif;
+  border-radius: 15px;
+  position: relative;
+  padding: 1em;
+  background-color: rgba(175, 162, 162, 0.5019607843);
+  color: #885157;
+  cursor: pointer;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5803921569);
+  transition: 0.7s;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+.mainMision .misionBox .container label::before {
+  content: "Leer Mas";
+}
+.mainMision .misionBox .container label:hover {
+  color: #000000;
+  box-shadow: inset 0 0 5px #885157, 0 0 5px rgba(0, 0, 0, 0.5803921569);
+  transform: scale(0.9);
+}
+.mainMision .misionBox .fotoMision {
+  padding-top: 40px;
+  padding-bottom: 60px;
+}
+.mainMision .misionBox .fotoMision img {
+  max-width: 100%;
+  box-shadow: 0 0 5px #000000;
+}
+
+@media only screen and (min-width: 768px) {
+  .mainMision .misionBox {
+    padding: 80px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .mainMision .misionBox {
+    padding: 300px;
+    padding-top: 50px;
+    padding-bottom: 80px;
+    font-size: 20px;
+  }
+  .mainMision .misionBox .container .loremVisible::first-letter {
+    font-size: 40px;
+  }
+}
+@media only screen and (min-width: 1700px) {
+  .mainMision .misionBox {
+    padding: 450px;
+    padding-top: 50px;
+    padding-bottom: 80px;
+  }
+}
+.mainBlog .blogBox {
+  padding: 10px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  grid-gap: 40px;
+  width: 100%;
+  height: auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(6, 400px);
+  font-family: "Roboto", sans-serif;
+  animation-name: aparecer;
+  animation-duration: 1s;
+}
+.mainBlog .blogBox .itemblog {
+  border: 1px solid #000000;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  box-shadow: 0 0 5px #000000;
+}
+.mainBlog .blogBox .itemblog a {
+  color: #000000;
+}
+.mainBlog .blogBox .itemblog a .loremBlog {
+  font-size: 20px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-image: linear-gradient(to top, #adadad, rgba(223, 216, 203, 0));
+  padding: 10px;
+  transition: 0.7s;
+  text-align: center;
+}
+.mainBlog .blogBox .itemblog a .loremBlog:hover {
+  height: 110px;
+  font-size: 36px;
+  padding-top: 25px;
+  font-weight: bold;
+}
+.mainBlog .blogBox .itemblog a .loremBlog::first-letter {
+  font-size: 36px;
+  font-weight: bold;
+}
+.mainBlog .blogBox .itemblog1 {
+  background-image: url(../IMG/niños/Blog\ Card\ 2.webp);
+}
+.mainBlog .blogBox .itemblog2 {
+  background-image: url(../IMG/bebes/Blog\ Card\ 1.webp);
+}
+.mainBlog .blogBox .itemblog3 {
+  background-image: url(../IMG/niños/Blog\ Card\ 6.webp);
+}
+.mainBlog .blogBox .itemblog4 {
+  background-image: url(../IMG/novios/Blog\ Card\ 3.webp);
+}
+.mainBlog .blogBox .itemblog5 {
+  background-image: url(../IMG/pymes/Blog\ Card\ 4.webp);
+}
+.mainBlog .blogBox .itemblog6 {
+  background-image: url(../IMG/pymes/Blog\ Card\ 5.webp);
+}
+
+@media only screen and (min-width: 768px) {
+  .mainBlog .blogBox {
+    padding: 80px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(3, 400px);
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .mainBlog .blogBox {
+    padding: 190px;
+    padding-top: 50px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: repeat(2, 400px);
+  }
+}
+@media only screen and (min-width: 1700px) {
+  .mainBlog .blogBox {
+    grid-template-rows: repeat(2, 600px);
+  }
+  .mainBlog .blogBox .itemblog a .loremBlog {
+    font-size: 40px;
+  }
+  .mainBlog .blogBox .itemblog a .loremBlog:hover {
+    height: 140px;
+    font-size: 50px;
+    padding-top: 40px;
+    font-weight: bold;
+  }
+  .mainBlog .blogBox .itemblog a .loremBlog::first-letter {
+    font-size: 50px;
+  }
+}
+
+/*# sourceMappingURL=estilos.css.map */

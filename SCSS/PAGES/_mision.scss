@@ -1,0 +1,111 @@
+
+.mainMision {
+    .misionBox {
+        font-family: 'Roboto', sans-serif;
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        animation-name: aparecer;
+        animation-duration: 1s;
+        .container {
+            .loremVisible {
+                &::first-letter {
+                    font-size: 36px;
+                    font-weight: bold;
+                }
+            }
+            .dots {
+                &:has(~ input[type="checkbox"]:checked) {
+                    display: none;
+                }
+            }
+            .loremExtra {
+                display: none;
+                &:has(~ input[type="checkbox"]:checked) {
+                    display: inline;
+                }
+            }
+            input {
+                &[type="checkbox"] {
+                    height: 1em;
+                    display: block;
+                    appearance: none;
+                }
+                &[type="checkbox"]:checked ~ label::before {
+                    content: 'Leer Menos';
+                }
+            }
+            label {
+                font-family: 'Roboto', sans-serif;
+                border-radius: 15px;
+                position: relative;
+                padding: 1em;
+                background-color: #afa2a280;
+                color:#885157;
+                cursor: pointer;
+                box-shadow: 0 0 5px #00000094;
+                transition: 0.7s;
+                text-transform: uppercase;
+                font-weight: bold;
+                &::before {
+                    content: 'Leer Mas';
+                }
+                &:hover {
+                    color: #000000;
+                    box-shadow: inset 0 0 5px #885157, 0 0 5px #00000094;
+                    transform: scale(0.9);
+                }
+                
+            }
+        }
+        .fotoMision {
+            padding-top: 40px;
+            padding-bottom: 60px;
+            img {
+                max-width: 100%;
+                box-shadow: 0 0 5px #000000;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width:768px) {
+
+    .mainMision {
+        .misionBox {
+            padding: 80px;
+    }
+    }
+}
+
+@media only screen and (min-width:1200px) {
+
+    .mainMision {
+        .misionBox {
+            padding: 300px;
+            padding-top: 50px;
+            padding-bottom: 80px;
+            font-size: 20px;
+            .container {
+                .loremVisible {
+                    &::first-letter {
+                        font-size: 40px;
+                    }
+                }
+            }
+    }
+    }
+}
+
+@media only screen and (min-width:1700px) {
+
+    .mainMision {
+        .misionBox {
+            padding: 450px;
+            padding-top: 50px;
+            padding-bottom: 80px;
+        }
+    }
+}
